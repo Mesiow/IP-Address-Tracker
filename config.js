@@ -3,5 +3,6 @@ if(process.env.NODE_ENV !== 'production'){
 }
 
 module.exports = {
-    MAPBOX_KEY: process.env.MAPBOX_KEY
+    MAPBOX_KEY: process.env.MAPBOX_KEY,
+    IPIFY_KEY: process.env.IPIFY_KEY
 };
