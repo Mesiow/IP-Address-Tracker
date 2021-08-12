@@ -9,15 +9,84 @@ body{
 #top{
     margin-top: 60px;
     height: 250px;
-    background-color: white;
+
+    background: #0052D4;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6FB1FC, #4364F7, #0052D4);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6FB1FC, #4364F7, #0052D4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.2), 0 0px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+}
+
+@font-face {
+    font-family: titillium;
+    src: url(TitilliumWeb-Regular.ttf);
+}
+
+#title{
+    font-family: titillium;
+    padding-top: 10px;
+    /*color:#FCF5E5;*/
+    color:white;
+}
+
+#input{
+    margin:auto;
+    margin-top:25px;
+    width: 50%;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+#info{
+    position:absolute;
+    z-index: 10;
+    width: 90%;
+    margin-left: 5%;
+    top: 18%;
+}
+
+#info ul{
+    height: 130px;
+}
+
+#info ul li{
+    padding: 0;
+    padding-top: 5px;
+    border-right: 1px solid white;
+}
+
+#info ul li:nth-of-type(1){
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+#info ul .vertical-border{
+    padding: 2px;
+    border-right: 1px solid #d3d3d3;
+    z-index: 10 !important;
+    height: 50px;
+}
+
+#info ul li:nth-of-type(4){
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+#info ul li .info-title{
+    color:#949494;
 }
 
 #mapid{
     height: 580px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 0 !important;
 }
 
 .container{
-    
+    position:relative;
+    text-align: center;
 }

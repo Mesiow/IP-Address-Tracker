@@ -1,7 +1,35 @@
 <%-include("partials/header")%>
 
 <div class="container">
-   <div id="top"></div>
+   <div id="top">
+      <h2 id="title">IP Address Tracker</h2>
+
+      <form>
+         <div id="input" class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Search for any IP address or domain" aria-label="IP address or domain" aria-describedby="button-addon2">
+            <button class="btn btn-dark" type="button" id="button-addon2">Go</button>
+         </div>
+      </form>
+   </div>
+   <div id="info">
+      <ul class="list-group list-group-horizontal">
+         <li class="list-group-item flex-fill">
+            <span class="info-title">IP Address</span>
+            <div class="vertical-border"></div>
+         </li>
+         <li class="list-group-item flex-fill">
+            <span class="info-title">Location</span>
+            <div class="vertical-border"></div>
+         </li>
+         <li class="list-group-item flex-fill">
+            <span class="info-title">Time Zone</span>
+            <div class="vertical-border"></div>
+         </li>
+         <li class="list-group-item flex-fill">
+            <span class="info-title">ISP</span>
+         </li>
+       </ul>
+   </div>
    <div id="mapid"></div>
 </div>
    
