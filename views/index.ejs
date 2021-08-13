@@ -4,36 +4,46 @@
    <div id="top">
       <h2 id="title">IP Address Tracker</h2>
 
-      <form>
+      <form id="search-form" action="/" method="POST">
          <div id="input" class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Search for any IP address or domain" aria-label="IP address or domain" aria-describedby="button-addon2">
-            <button class="btn btn-dark" type="button" id="button-addon2">Go</button>
+            <input type="text" name="address" class="form-control" placeholder="Search for any IP address or domain" aria-label="IP address or domain" aria-describedby="button-addon2">
+            <button class="btn btn-dark" id="button-addon2" type="submit" onclick="onFormSubmit()">Go</button>
          </div>
       </form>
    </div>
-   <div id="info">
+   <div id="data-container">
       <ul class="list-group list-group-horizontal">
          <li class="list-group-item flex-fill">
-            <span class="info-title">IP Address</span>
+            <span class="data-title">IP Address</span>
+            <h2 class="data">192.168.1.1</h2>
             <div class="vertical-border"></div>
          </li>
          <li class="list-group-item flex-fill">
-            <span class="info-title">Location</span>
+            <span class="data-title">Location</span>
             <div class="vertical-border"></div>
          </li>
          <li class="list-group-item flex-fill">
-            <span class="info-title">Time Zone</span>
+            <span class="data-title">Time Zone</span>
             <div class="vertical-border"></div>
          </li>
          <li class="list-group-item flex-fill">
-            <span class="info-title">ISP</span>
+            <span class="data-title">ISP</span>
          </li>
        </ul>
    </div>
    <div id="mapid"></div>
 </div>
    
-   <script src="map.js" type="text/javascript"></script>
+<script src="map.js" type="text/javascript"></script>
+<script type="text/javascript">
+   //func for clearing form after submitting
+   function onFormSubmit(){
+      var form = document.getElementById("search-form");
+      form.reset();
+
+      return false;
+   }
+</script>
 
 <%-include("partials/footer")%>
    

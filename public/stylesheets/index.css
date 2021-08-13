@@ -41,7 +41,7 @@ body{
     -o-border-radius: 10px;
 }
 
-#info{
+#data-container{
     position:absolute;
     z-index: 10;
     width: 90%;
@@ -49,35 +49,43 @@ body{
     top: 18%;
 }
 
-#info ul{
+#data-container ul{
     height: 130px;
 }
 
-#info ul li{
+#data-container ul li{
     padding: 0;
-    padding-top: 5px;
+    padding-top: 10px;
     border-right: 1px solid white;
 }
 
-#info ul li:nth-of-type(1){
+#data-container ul li:nth-of-type(1){
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
 }
 
-#info ul .vertical-border{
+#data-container ul .vertical-border{
     padding: 2px;
     border-right: 1px solid #d3d3d3;
     z-index: 10 !important;
-    height: 50px;
+    height: 80px;
 }
 
-#info ul li:nth-of-type(4){
+#data-container ul li:nth-of-type(4){
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
 }
 
-#info ul li .info-title{
+#data-container ul li .data-title{
     color:#949494;
+    padding-right: 45%;
+}
+
+#data-container ul li .data{
+    position: absolute;
+    padding-top: 5%;
+    padding-left: 10%;
+    font-size:larger;
 }
 
 #mapid{
