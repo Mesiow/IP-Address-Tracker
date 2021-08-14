@@ -4,10 +4,10 @@
    <div id="top">
       <h2 id="title">IP Address Tracker</h2>
 
-      <form id="search-form" action="/" method="POST">
+      <form id="search-form" action="/result" method="GET">
          <div id="input" class="input-group mb-3">
             <input type="text" name="address" class="form-control" placeholder="Search for any IP address or domain" aria-label="IP address or domain" aria-describedby="button-addon2">
-            <button class="btn btn-dark" id="button-addon2" type="submit" onclick="onFormSubmit()">Go</button>
+            <button class="btn btn-dark shadow-none" id="button-addon2" type="submit" onclick="onFormSubmit()">Go</button>
          </div>
       </form>
    </div>
@@ -41,7 +41,7 @@
       var form = document.getElementById("search-form");
       form.reset();
 
-      return false;
+      return true;
    }
 </script>
 
