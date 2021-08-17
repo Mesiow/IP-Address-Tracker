@@ -78,6 +78,7 @@
    //default values
    var lat = 42.3610;
    var lng = -71.0587;
+   var zoom = 12;
 
    //There's data to retrieve
    if(api_data != 'null'){
@@ -89,7 +90,10 @@
    }
    var map = L.map('mapid')
    .addLayer(tiles)
-   .setView([lat, lng], 15);
+   .setView([lat, lng], zoom);
+
+   if(api_data != 'null')
+      var marker = L.marker([lat, lng]).addTo(map);
 
    
 </script>
