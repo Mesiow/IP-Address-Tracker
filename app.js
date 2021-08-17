@@ -9,7 +9,7 @@ app.use(express.static(__dirname + "/public"));
 const api_url = `https://geo.ipify.org/api/v1?apiKey=${env.IPIFY_KEY}`;
 
 app.get("/", (req, res) => {
-   res.render("index", {data: null}); 
+   res.render("index", {data: null, mapbox_key: env.MAPBOX_KEY}); 
 });
 
 app.get("/result", (req, res) => {
@@ -18,7 +18,7 @@ app.get("/result", (req, res) => {
     fetch(url)
      .then(res => res.json())
      .then(json => {
-         res.render("index", {data: json});
+         res.render("index", {data: json, mapbox_key: env.MAPBOX_KEY});
      });
 });
 
